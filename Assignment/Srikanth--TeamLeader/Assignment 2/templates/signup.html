@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block head %} {% endblock %}
+{% block body %} 
+<body>
+     
+        
+        <form action="register" method="post" class="signupForm">
+            <h1>Sign up ....</h1>
+            <div>
+            <label for="name"><i class="input"></i></label> <input class="signupInput"
+            type="text" name="name" id="name" placeholder="Your Name"required /><br></br>
+            </div>
+            <div>
+            <label for="pass"><i class="input"></i></label> <input class="signupInput"
+            type="password" name="password" id="password" placeholder="Password"  required/><br></br>
+            </div>
+            <div>
+                <label for="email"><i class="input"></i></label> <input class="signupInput"
+            type="email" name="email" id="email" placeholder="abc@gmail.com" required /><br></br>
+            </div>
+            <div>
+    <label for="contact"><i class="input"></i></label>
+    <input type="text" name="contact" id="contact" placeholder="Contact no" class="signupInput" /> <br></br>
+    
+    </div>
+            <button class = "btn1" >Create</button><br></br>
+             
+           
+        </form>
+      
+        </body>
+        <style>
+   
+            body{
+              color: aqua;
+              font-family: sans-serif;
+              background-color: black;
+      
+          }
+          
+        .signupInput{
+              border-radius: 5px;
+              outline: none;
+          }
+          .signupInput:hover{
+              cursor: pointer;
+              background-color: antiquewhite;
+          }
+          .btn1{
+              color: white;
+              background-color: rgb(31, 31, 128);
+              width: 100px;
+              height: 40px;
+              border: 1px solid black;
+              cursor: pointer;
+              transition : 0.15s;
+              border-radius: 5px;
+              margin-left: 8px;
+          }
+          .btn1:hover{
+              background-color: rgb(60, 60, 231);
+              color: white;
+              box-shadow: 5px 5px 10px rgba(78, 18, 18,0.4);
+             
+          }
+          .signupForm{
+            margin-top: 5px;
+            background-color: rgba(0, 0, 0, 0.596);
+            height: 500px;
+            width: 400px;
+            margin-left: 300px;
+          }
+      </style>
+       
+{% endblock%}
