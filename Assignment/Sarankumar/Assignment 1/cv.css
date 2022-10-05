@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    justify-content: center;
+    display: flex;
+    font-style: oblique;
+    max-width: 8.27in;
+    max-height: 11.69in;
+}
+img{
+    max-width: 1.1in;
+    min-height: 1.6in;
+
+}
+.full{
+    background-color: rgb(214, 237, 222);
+    margin: 0px;
+    display:inline;
+}
+.top{
+    display: inline;
+    position: grid;
+    background-color: rgb(176, 182, 198);
+    min-width: 7.17in;
+    min-height: 1.6in;
+    font-size: 20px;
+    padding: 30px;
+    float: left;
+}
+.img{
+    position: static;
+    display:grid;
+}
+.down{
+    display: inline;
+    position: fixed;
+    min-width: 8.27in;
+    min-height: 10.0in;
+    background-color: rgb(116, 123, 130);
+}
+.left{
+    display: inline;
+    position: fixed;
+    max-width:5.3in;
+    min-height: 10.0in;
+    font-size: 20px;
+    background-color: rgb(144, 162, 177);
+}
+.right{
+    display: inline;
+    position: fixed;
+    left:5.3in ;
+    max-width:2.97in;
+    min-height: 10.0in;
+    background-color: rgb(176, 182, 198);
+    font-size: 20px;
+    
+}
+.EDu,.Achievements,.Career,.Technical,.Strengths,.Hobbies,.Contact,.Declare{
+padding: 35px;
+}
