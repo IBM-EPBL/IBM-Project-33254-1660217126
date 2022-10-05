@@ -2,12 +2,15 @@
 {% block content %}
 
     <div class="container">
+        <form method="POST">
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required="required">
+        <label for="umobile"><b>Mobile no</b></label>
+        <input type="text" placeholder="+91" name="umobile" required="required">
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required="required">
-        <button type="submit">Login</button>
-        
+        <button type="submit" data-toggle="modal" data-target="#myModal">Login</button>
+       </form>
         
     </div>
     <style>
