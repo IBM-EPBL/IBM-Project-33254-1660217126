@@ -4,100 +4,28 @@
 {% block body %} 
  
 <body>
-
  
-	<div class="header">
-		<form action="Valid" method="get" class="form">
-			<div class="inputgiven">
-				<label for="email"><i class="input"></i></label> <input type="email" class ="signinInput"
-					name="email" id="email" placeholder="abc@gmail.com" required /><br></br>
-				<label for="pass"><i class="input"></i></label> <input class="signinInput"
-					type="password" name="password" id="password"
-					placeholder="Password" required /><br></br>
-
-			</div>
-			<div>
-				<button class="editable" formaction="{{url_for('home')}}">Login</button>
-				<a class="siginA" href="signup"> Create a Account</a>
-			</div>
-		</form>
-
-	</div>
+	 
+	<form style="font-family: convergence; margin-left: 100px; margin-top: 40px; width: 600px; ;margin-bottom: 40px;">
+		<div class="mb-3">
+		  <label for="exampleInputEmail1" class="form-label">Email address</label>
+		  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+		  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+		</div>
+		<div class="mb-3">
+		  <label for="exampleInputPassword1" class="form-label">Password</label>
+		  <input type="password" class="form-control" id="exampleInputPassword1">
+		</div>
+		<div class="mb-3 form-check">
+		  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+		  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	  </form>
+	
+ 
 </body>
 </html>
-<style>
  
-	.return {
-		height: 45px;
-		width: 90px;
-		color: white;
-		background-color: dodgerblue;
-		outline: none;
-		border: none;
-		border-radius: 6px;
-		cursor: pointer;
-		font-size: 20px;
-	}
-	
-	form {
-		margin-top: 70px;
-		background-color: white;
-		width: 350px;
-		height: 250px;
-		border-radius: 10px;
-		margin-left: 100px;
-	}
-	
-	.header {
-		width: 100%;
-		margin-left: 1px;
-	}
-	
-	body {
-		background-color: black;
-		 
-	}
-	
-	.signinInput {
-		margin-left: 10px;
-		margin-top: 10px;
-		height: 40px;
-		width: 300px;
-		border-radius: 6px;
-		font-size: 20px;
-		padding-left: 10px;
-		border: 1px solid blue;
-		font-weight: bold;
-		outline-color: black;
-	}
-	
-	.signinInput:hover {
-		border-color: skyblue;
-		outline: none;
-	}
-	
-	.editable {
-		font-weight: bold;
-		font-size: 20px;
-		height: 40px;
-		width: 150px;
-		margin-left: 0px;
-		border-radius: 6px;
-		border-end-end-radius: 10px;
-		margin-left: 10px;
-		cursor: pointer;
-	}
-	
-	.siginA {
-		text-decoration: none;
-		font-size: 20px;
-		margin-left: 2px;
-		font-family: 'Times New Roman';
-		color: black;
-	}
-	
-	.siginA:hover {
-		color: blue;
-	}
-	</style>
+ 
 	 {% endblock%}

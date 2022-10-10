@@ -9,19 +9,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
     <header>
-        <div class="mainheader">
-            <a class="search" href="/" style="text-decoration: none;"> <img src="home icon.png" alt=""> Home</a>
-            <a class="search" href="/signin" style="margin-right: -7px; ">Signin</a>
-            <a class="search1" href="signup">Sign up</a>
-            <label for=""><i></i></label>
-            <div>
-            <div class="input-group">
-                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                <button type="button" class="btn btn-outline-secondary" style="color: black;">search</button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="font-size: 30px;">
+            <div class="container-fluid">
+               
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link  "   href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/signin">Sign In</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link  " href="/signup">Sign up</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  " href="/about">About  </a>
+                  </li>
+                </ul>
+                <form class="d-flex" style="font-family: convergence;">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
             </div>
-        </div>
-         </div>
-       
+          </nav>
     </header>
      {% block head %}
      
@@ -37,7 +53,7 @@
     {% endblock %}
 </body>
 </html>
-<style>
+<!-- <style>
     *{
         margin: 0;
         padding: 0;
@@ -76,4 +92,4 @@
         border-bottom-left-radius: 4px;
     }
      
-</style>
+</style> -->
