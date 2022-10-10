@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <form method="POST">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required="required">
+        <label for="umobile"><b>Mobile no</b></label>
+        <input type="text" placeholder="Enter Mobile no" name="umobile" required="required">
+        <label for="uemail"><b>UserEmail</b></label>
+        <input type="text" placeholder="Enter UserEmail" name="uemail" required="required">
+        <label for="psw"><b>Password</b></label>
+        <input type="password"  name="psw" required="required" placeholder="Enter Password" autocomplete="current-password">
+        <label for="cpsw"><b>Confirm Password</b></label>
+        <input type="password" placeholder="Confirm Password" name="cpsw" required="required">
+        <button type="submit" data-toggle="modal" data-target="#myModal">Signup</button>
+    </form>
+</div>
+<style>
+    input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+
+    input[type=password] {
+        position:static;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    .container {
+        padding: 16px;
+        width: 300px;
+    }
+    body{
+           background-image: linear-gradient(#04AA6D,white);
+        }
+</style>
+{% endblock content %}
