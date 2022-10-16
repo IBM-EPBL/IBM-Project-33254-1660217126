@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Std List</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: aqua;">
+
+	<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><h1 style="border: solid rgb(238, 12, 174); color: brown; background-color: greenyellow;">Siva</h1></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signin">SignIn</a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="signup">SignUp</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<table> 
+    <thead> 
+    <tr style="margin: 30px;"> 
+        <th>Name</th> 
+        <th>Email</th> 
+        <th>Password</th>
+    </tr> 
+    </thead> 
+    <tbody> 
+        {% for row in value %}  
+            <tr> 
+                <td>{{row[0]}}</td> 
+                <td>{{row[1]}}</td> 
+                <td>{{row[2]}}</td>
+            </tr> 
+        {% endfor %} 
+    </tbody> 
+</table> 
+	
+</body>
+<div>
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "bf682d71-03b1-4381-9b68-f0224db3047e", // The ID of this integration.
+      region: "kr-seo", // The region your integration is hosted in.
+      serviceInstanceID: "1b96b529-c664-4e6e-8be0-21b4ddb85dfd", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</div>
+</html>
+<style>
+.wel{
+	color:rgb(72, 0, 255);
+	font-size:50px;
+	padding-left:100px;
+	padding-top:150px;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	
+}
+td {
+        width: 150px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 5px;
+        color: solid black;
+        font-weight: bold;
+        font-style: italic;
+      }
+</style>
