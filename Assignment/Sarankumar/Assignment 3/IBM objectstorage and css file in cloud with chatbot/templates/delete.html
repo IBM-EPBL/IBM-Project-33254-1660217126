@@ -1,0 +1,73 @@
+{% extends "next.html" %}
+{% block content %}
+<br>
+
+{% if tag %}
+<body>
+	<h1>Delete File</h1>
+
+	<form action="/delete" method="POST">
+		<div class="del">
+
+			<input type="text" value="flaskstorage" name="bucket" readonly />
+			<br>
+			<br>
+			<input type="text" placeholder="Enter file name" name="filename" required="required" />
+			<br>
+			<br>
+			<button type="submit">Submit</button>
+		</div>
+	</form>
+
+</body>
+{% else %}
+<body>
+	<h1>File Deleted Successful !</h1>
+</body>
+
+{% endif %}
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Island+Moments&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+	body {
+		align-items: center;
+		background-color: #000;
+	}
+
+	body h1 {
+		margin-top: 10px;
+		font-size: 50px;
+		padding-bottom: 30px;
+		color: #fff;
+	}
+
+	.del {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 30px;
+	}
+
+	.del input {
+		width: 250px;
+		border: none;
+		border-radius: 5px;
+
+		padding-left: 5px;
+		outline: none;
+		height: 25px;
+		margin-top: 10px;
+		font-size: medium;
+	}
+
+	button {
+		background-color: #fff;
+		color: #000;
+		border-radius: .05in;
+		width: 100px;
+
+		cursor: pointer;
+	}
+</style>
+{% endblock content %}

@@ -1,0 +1,69 @@
+{% extends "next.html" %}
+{% block content %}
+<br>
+
+{% if tag %}
+<h1>Upload File</h1>
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+   <div class="up">
+      <input type="text" value="flaskstorage" name="bucket" readonly />
+      <br>
+      <br>
+      <input type="text" placeholder="Enter file name" name="filename" />
+      <br>
+      <br>
+      <div class="file" style="margin-left: 50%; margin-top:0;transform: translate(0,-50%);"><input type="file"
+            name="file" style="width: 510px;color: #fff;" required="required"/></div>
+      <br>
+      <br>
+      <button type="submit">Submit</button>
+   </div>
+</form>
+{% else %}
+<h1>File Uploaded Successfully !</h1>
+{% endif %}
+
+
+<style>
+   body {
+      align-items: center;
+      background-color: #000;
+   }
+
+   body h1 {
+      margin-top: 10px;
+      font-size: 50px;
+      padding-bottom: 30px;
+      color: #fff;
+   }
+
+   .up {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      justify-content: center;
+
+   }
+
+   .up input {
+      height: 25px;
+      padding-left: 5px;
+      width: 250px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      font-size: medium;
+   }
+
+   .up button {
+      background-color: #fff;
+      color: #000;
+      border-radius: 5px;
+      width: 100px;
+      cursor: pointer;
+
+   }
+</style>
+{% endblock content %}
