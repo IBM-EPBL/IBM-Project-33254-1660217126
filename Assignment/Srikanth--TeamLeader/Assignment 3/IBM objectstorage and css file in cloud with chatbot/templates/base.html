@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome</title>
+
+  <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css'
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container-fluid well well-sm" style="background-color: #000; @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');">
+    <a class="navbar-brand" href="/" style="color: #fff;">Home</a>
+    <a class="navbar-brand " href="/signin" style="color: #fff;">Login</a>
+    <a class="navbar-brand " href="/signup" style="color:#fff;">Signup</a>
+  </div>
+</body>
+<style>
+</style>
+
+  {% block content %}
+ 
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Island+Moments&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+    body{
+      font-family: "Poppins";
+    }
+  
+  
+    
+  </style>
+
+  {% endblock content %}
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
+    
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "e815b6ee-0f6f-4ea2-b370-016936f0586b", // The ID of this integration.
+        region: "jp-tok", // The region your integration is hosted in.
+        serviceInstanceID: "7a7453ce-1f10-4864-9bd0-ce7ab19a19fc", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+</body>
+
+</html>

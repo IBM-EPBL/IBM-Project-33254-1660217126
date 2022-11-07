@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Your Files</title>
+</head>
+
+<body>
+   <div class="container">
+      <a href="/next">Files</a>
+      <a href="/upload">Upload</a>
+      <a href="/delete">Delete</a>
+      <br>
+   </div>
+</body>
+{% block content %}
+<div class="cont">
+   <h1></h1>
+   {% for row in files %}
+   <div class="filename">
+      <h3>{{row}} </h3>
+   </div>
+   <img src=https://flaskstorage.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{row}} width="500px"></td>
+
+   {% endfor %}
+</div>
+{% endblock content %}
+
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Island+Moments&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+   * {
+      margin: 0;
+      padding: 0px;
+      font-family: "Poppins";
+   }
+
+   body {
+      display: flex;
+      background-color: #000;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+
+   }
+
+   h3 {
+      opacity: .5;
+      color: #fff;
+   }
+
+   .container {
+      display: flex;
+      
+      border: none;
+      height: 50px;
+      width: 100vw;
+      border-bottom: 1px solid #fff;
+
+   }
+
+   .container a {
+      color: #fff;
+      border-bottom: none;
+      text-decoration: none;
+      padding: 10px;
+
+   }
+
+   a:hover {
+      color: rgb(118, 126, 219);
+      transition: .4s;
+   }
+
+   .cont {
+      display: flex;
+      width: 100vw;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #000;
+
+   }
+</style>
+
+
+</html>
