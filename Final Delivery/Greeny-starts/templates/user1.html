@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Greeny-Starts</title>
+
+    <script type="text/javascript">
+      function preventbackbutton() { window.history.forward(); }
+      setTimeout("preventbackbutton()", 0);
+      window.onunload = function () { null };
+  </script>
+
+</head>
+<body class="bg">
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" ><h1 style="font-size: 50px; font-weight: 800;border-radius: 50%; border: 2px solid #29f700; width: 50px; height: 50px; display: flex;align-items: center;justify-content: center" >G</h1></a>
+          <a class="navbar-brand" href="#">GreenyStarts</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto ">
+              <li class="nav-item">
+                <a class="nav-link" href="#my-learnings">My learnings</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#job-profiles">Job Profiles</a>
+              </li> 
+            </ul class="navbar-nav "></i>
+            <button  onclick="openPopup()" class="btn" id="profile" style="color: #29f700;border:2px solid #29f700;">Profile</button>
+            <a href="/"><button class="btn btn-danger" >Logout</button></a>
+          </form>
+
+          
+          
+
+
+          </div>
+        </div>
+      </nav>
+      <!-- popup------------------ -->
+
+      
+        <div class="popup" id="popup">
+          <div class="container rounded bg-white mt-5 mb-5" style="width: 1000px;">
+            
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img
+                                class="rounded-circle mt-5" width="150px"
+                                src="/static/images/profilephoto1.jpg"><span
+                                class="font-weight-bold">{{username}}</span><span class="text-black-50" style="overflow: hidden;">{{usermail}}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="p-3 py-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="text-right" style="color:  #fff;">Your Profile</h4>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-6"><label class="labels">Name</label><input type="text"
+                                        class="form-control"  value="{{username}}" readonly></div>
+                                <div class="col-md-6"><label class="labels">Surname</label><input type="text"
+                                        class="form-control" value="{{fname}}" readonly></div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text"
+                                        class="form-control" value="{{mobile}}" readonly></div>
+                                <div class="col-md-12"><label class="labels">Email ID</label><input type="text"
+                                        class="form-control" value="{{usermail}}" readonly></div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6"><label class="labels">Country</label><input type="text"
+                                        class="form-control" value="{{country}}" readonly></div>
+                                <div class="col-md-6"><label class="labels">Male/Female</label><input type="text"
+                                        class="form-control" value="{{gender}}" readonly></div>
+                            </div>
+                            <div class="mt-5 text-center"><button class="btn btn-primary profile-button" style="background-color: #29f700;" onclick="closePopup()">Exit Profile</button></div>
+                        </div>
+                        
+                    </div>
+    
+                </div>
+        
+        </div>
+        
+        </div>
+
+
+  <section id="my-learnings">
+    <div class="container d-flex flex-column align-items-center text-center  py-5" style="width: 100%; height: 100vh; padding-top: 20px">
+      <h1 class="text-center my-5" style="color: #fff;">My learnings</h1>
+      <div class="row">
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <img class="card-img-top" src="/static/images/python.jpg" style="height: 200px;" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Python for Beginners</h5>
+            <a href="https://youtube.com/playlist?list=PLd3UqWTnYXOmzcSdWIh-EggqAtCXvJxzu" class="btn btn-primary" style="background-color: #29f700;">Start learning</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <img class="card-img-top" src="/static/images/java.jpg" style="height: 200px;" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Java for Beginners</h5>
+            <a href="https://youtube.com/playlist?list=PLd3UqWTnYXOmx_J1774ukG_rvrpyWczm0" class="btn btn-primary" style="background-color: #29f700;">Start learning</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <img class="card-img-top" src="/static/images/html.jpg" style="height: 200px;" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Html for Beginners</h5>
+            <a href="https://youtube.com/playlist?list=PLKT3i0RirB9z7yhrTHG-7DlxIWgtT_CDM" class="btn btn-primary" style="background-color: #29f700;">Start learning</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </section>
+  <section id="job-profiles">
+    <div class="container d-flex flex-column align-items-center text-center my-3 py-5" style="width: 100%; height: 100%; margin-top: 10px">
+      <div class="text-center my-5 " >
+          <div class="di">
+            {% for row in files %}
+            <div class="box">
+               <h3 class="he" style="color: #fff;">{{row [:-4]}}</h3>
+               <img src="https://green-starts.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{row}}" width="450px" height="150px" ></td>
+               <a href="#" role="button" type="submit" class="btn btn-primary" style="background-color: #29f700;">Apply Now</a>
+            </div>
+         {% endfor %}
+         </div>
+        </div>
+      </div>
+  </section>
+
+
+  <script>
+    let popup=document.getElementById("popup");
+
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+    function closePopup(){
+      popup.classList.remove("open-popup");
+    }
+</script>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Island+Moments&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+#navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    /* padding: .5rem 5rem; */
+    box-shadow: 5px 5px 20px rgb(0,0,0,.5);
+    background-color: #000;
+    color: #fff !important;
+}
+
+.navbar .navbar-brand{
+    font-size: 25px;
+    font-weight: 800;
+    color: #29f700;
+}
+#navbarSupportedContent a{
+    color: #fff ;
+    border-bottom: 2px solid transparent;
+}
+#navbarSupportedContent a:hover{
+    border-bottom: 2px solid  #29f700;
+}
+#navbarSupportedContent button{
+    background:g#29f700;
+    border-radius: 15px;
+}
+#navbarSupportedContent #btnlogin{
+    background: #29f700;
+}
+.box{
+  width: 700px;
+  height: 220px;
+  border: 4px solid grey;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.box:hover{
+  border: 4px solid #29f700;
+}
+.box a{
+  outline: none !important;
+  border: none !important;
+}
+.box a:hover{
+  transition: 4ms!important;
+  color: #333 !important;
+  
+}
+#profile:hover{
+  transition: 4ms!important;
+  color: #fff !important;
+
+}
+.card a{
+  outline: none !important;
+  border: none !important;
+
+}
+.card a:hover{
+  transition: 4ms;
+  color: #333 ;
+}
+
+/* opoup------------------- */
+.popup{
+    border-radius: 6px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility:hidden;
+    transition: 04.s,top 0.4s;
+    z-index: 100;
+    
+}
+.open-popup{
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) scale(1);
+}
+#my-learnings{
+  position: -ms-page;
+}
+.bg{
+      background: url("/static/images/profilebg.jpg") no-repeat;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+}
+</style>
+</html>

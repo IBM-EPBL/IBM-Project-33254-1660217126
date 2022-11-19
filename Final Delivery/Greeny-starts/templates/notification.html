@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>--Thank You--</title>
+
+    <script type="text/javascript">
+        function preventbackbutton() { window.history.forward(); }
+        setTimeout("preventbackbutton()", 0);
+        window.onunload = function () { null };
+    </script>
+
+</head>
+<body style="background: url(/static/images/image1.jpg);">
+    <div class="box">
+        <input type="number" class="ip" placeholder=" Enter OTP"><br><br>
+        <button class="btn" onclick="openPopup()">Submit OTP</button>
+        <div class="popup" id="popup">
+            <img src="{{image}}" alt="Tick">
+            <h2>{{msg1}}</h2>
+            <p>{{msg2}}</p>
+            <a href="\"><button type="button">Ok</button></a>
+        </div>
+    </div>
+
+    <script>
+        let popup=document.getElementById("popup");
+    
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+    </script>
+</body>
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Island+Moments&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.btn{
+    padding: 10px 60px;
+    background: rgb(0, 225, 255);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+}
+.box
+{
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    height: 100px;
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+.ip{
+    border-radius: 10px;
+    height: 20px;
+}
+.popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: visible;
+    transition: 04.s,top 0.4s;
+}
+.open-popup{
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) scale(1);
+}
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+</style>

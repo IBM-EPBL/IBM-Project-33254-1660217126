@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Greeny Starts</title>
+
+    <script type="text/javascript">
+      function preventbackbutton() { window.history.forward(); }
+      setTimeout("preventbackbutton()", 0);
+      window.onunload = function () { null };
+  </script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" ><h1 style="font-size: 50px; font-weight: 800;border-radius: 50%; border: 2px solid #29f700; width: 50px; height: 50px; display: flex;align-items: center;justify-content: center" >G</h1></a>
+     
+      <a class="navbar-brand" href="#">GreenyStarts</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact">Contact us</a>
+          </li>
+        </ul>
+        <a href="/login" class="btn ml-2 my-lg-0 my-2" role="button" value="Submit" id="btnlogin">login</a>
+      </div>
+    </div>
+  </nav>
+  <form action="/checkuserExistence" method="post">
+  <section id="Home">
+    <h1 class="text-center">Skills and Job Recommender for You</h1>
+    <p>Find your path and build your career</p>
+      <div class="input-group">
+        <label for="mail" ></label>
+        <input type="email" id="mail" name="mail" class="form-control shadow-none" placeholder="Email Address" required="required">
+        <button class="btn signin" type="submit">Get Started</button>
+      </div>
+  </section>
+  </form>
+  <section id="About">
+    <div class="container-fluid">
+        <div class="col-lg-6 col-md-6 col-12 p-lg-5 p-2">
+          <h1>About us</h1>
+          <p>Helping professionals build personal brands.
+            Your resume is one of your most important career tools. But many professionals have no idea where to start, what to include, and what to leave off of their resumes. That’s where TopResume comes in. We can carefully craft your career story to target the job that you want to land.</p> 
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <section id="Contact">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 p-lg-5 p-2">
+          <img src="/static/images/pexels-kindel-media-7054550.jpg" class="img-fluid rounded float-left">
+        </div>
+        <div class="col-lg-6 col-md-6 col-12 p-lg-5 p-2" >
+          <h1>Contact us</h1>
+          <form action="">
+            <input type="text" class="form-control shadow-none" name="" id="" placeholder="Enter your name">
+            <input type="text" class="form-control shadow-none" placeholder="Enter your mail">
+            <textarea class="form-control shadow-none" placeholder="Your comments"></textarea>
+            <button class="btn signin">Send Message</button>
+          </form>
+          
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "e815b6ee-0f6f-4ea2-b370-016936f0586b", // The ID of this integration.
+        region: "jp-tok", // The region your integration is hosted in.
+        serviceInstanceID: "7a7453ce-1f10-4864-9bd0-ce7ab19a19fc", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+</body>
+
+</html>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Island+Moments&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+#navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 5px 5px 20px rgb(0,0,0,.5);
+    background-color: #000;
+    color: #fff !important;
+}
+
+.navbar .navbar-brand{
+    font-size: 25px;
+    font-weight: 800;
+    color: #29f700;
+}
+#navbarSupportedContent a{
+    color: #fff ;
+    border-bottom: 2px solid transparent;
+}
+#navbarSupportedContent a:hover{
+    border-bottom: 2px solid  #29f700;
+}
+#navbarSupportedContent button{
+    background:#29f700;
+    border-radius: 15px;
+}
+#navbarSupportedContent #btnlogin{
+    background: #29f700;
+
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#Home{             
+    background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url(/static/images/pexels-pixabay-163143.jpg);
+    background-size: cover;
+    background-position: center;  
+    display: flex;
+    flex-direction: column;
+}
+#Home h1{
+    font-size: 50px;
+    text-shadow: 0px 1px 0px #fff;
+    color: #fff;
+    letter-spacing: 3px;
+}
+#Home p{
+    font-size: 18px;
+    color: #fff;
+}
+#Home .input-group{
+    width: 40%;
+    height: 45px;
+}
+.signin{
+    background-color: #29f700 !important;
+    color: #fff ;
+    box-shadow: 2px 4px 5px rgb(0,0,0,.5);
+}
+#Home input{
+    border: none;
+}
+#About{
+    background: linear-gradient(#ea1d6f,#ea1d6f);
+}
+#About h1{
+    color: #fff;
+}
+#About p{
+    color: #fff;
+}
+#Contact{
+    background-color: #76D7C4;
+}
+#Contact img{
+    height: 100%;
+}
+#Contact form{
+    display: flex;
+    flex-direction: column;
+}
+#Contact form input{
+    margin-bottom: 10px;
+}
+#Contact form button{
+    margin-top: 10px;
+}
+
+
+</style>
